@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  /* Primary */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral */
+  --white-paragraph: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.wrapper {
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 325px;
+  margin: 48px auto;
+  /* height: 100vh; */
+}
+
+.car-section {
+  padding: 32px 24px;
+}
+
+header {
+  margin-bottom: 24px;
+}
+
+header img {
+  width: 48px;
+  height: 32px;
+  margin-bottom: 24px;
+}
+
+header h2 {
+  font-family: "Big Shoulders Display", sans-serif;
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+  font-size: 32px;
+}
+
+.car-section p {
+  margin-bottom: 32px;
+  color: var(--white-paragraph);
+  line-height: 1.8;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.btn {
+  letter-spacing: 1px;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 18px;
+  margin-left: 12px;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #495057;
+  transition: all ease-in 0.5s;
+}
+
+.sedan {
+  background-color: var(--bright-orange);
+  border-radius: 6px 6px 0 0;
+}
+
+.suv {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 6px 6px;
+}
+
+.btn-sedan {
+  color: var(--bright-orange);
+}
+
+.btn-suv {
+  color: var(--dark-cyan);
+}
+
+.btn-luxury {
+  color: var(--very-dark-cyan);
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    max-width: 768px;
+    margin: 48px auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .car-section {
+    padding: 32px;
+  }
+
+  .sedan {
+    border-radius: 6px 0 0 6px;
+  }
+
+  .luxury {
+    border-radius: 0 6px 6px 0;
+  }
+
+  .car-section p {
+    line-height: 1.5;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    max-width: 1024px;
+  }
+}
